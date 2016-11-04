@@ -7,23 +7,52 @@
 //
 
 #import "ViewController.h"
+#import "UIImage+Extension.h"
+#import "UIView+Extensions.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *blogPicImageView;
+
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+
 
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self demoUIImageExtension];
+
 }
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Demo Methods
+
+- (void)demoUIImageExtension {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    
+    UIImage *blogPic = [UIImage imageNamed:@"BlogPic"];
+    //blogPic = [UIImage convertImageToGrayScale:blogPic];
+    [self.blogPicImageView setImage:blogPic];
+}
+
+
+- (IBAction)loginButtonPressed:(id)sender {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    
+    //E.g. of a class method invocation:
+    //[UIView shakeItAnimation:self.passwordTextField];
+    
+    //E.g. of a instance method invocation:
+    [self.passwordTextField circle];
+    
+}
 
 @end

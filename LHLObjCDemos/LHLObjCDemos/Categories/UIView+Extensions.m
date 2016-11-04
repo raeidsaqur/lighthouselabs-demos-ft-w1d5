@@ -12,12 +12,13 @@
 + (void)shakeItAnimation:(UIView *)view {
     const int reset = 5;
     const int maxShakes = 6;
+    const float delay = 0.05f;
     
     static int shakes = 0;
     static int translate = reset;
     
     [UIView animateWithDuration:0.09 - (shakes * .01)
-                          delay:0.01f
+                          delay:delay
                         options:(enum UIViewAnimationOptions)UIViewAnimationCurveEaseInOut
                      animations:^{
                          view.transform = CGAffineTransformMakeTranslation(translate, 0);

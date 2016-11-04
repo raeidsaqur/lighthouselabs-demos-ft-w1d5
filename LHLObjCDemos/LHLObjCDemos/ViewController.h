@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)loginButtonPressed:(id)sender;
 
 @end
 
