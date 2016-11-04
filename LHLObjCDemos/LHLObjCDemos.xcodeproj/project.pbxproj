@@ -15,6 +15,14 @@
 		35CC2D271DCC0A1E001E9FF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35CC2D251DCC0A1E001E9FF9 /* LaunchScreen.storyboard */; };
 		35CC2D321DCC0A1E001E9FF9 /* LHLObjCDemosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CC2D311DCC0A1E001E9FF9 /* LHLObjCDemosTests.m */; };
 		35CC2D3D1DCC0A1E001E9FF9 /* LHLObjCDemosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CC2D3C1DCC0A1E001E9FF9 /* LHLObjCDemosUITests.m */; };
+		35CC2D551DCC0DE6001E9FF9 /* Helper+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CC2D4B1DCC0DE6001E9FF9 /* Helper+Extensions.swift */; };
+		35CC2D561DCC0DE6001E9FF9 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CC2D4C1DCC0DE6001E9FF9 /* UIButton+Extension.swift */; };
+		35CC2D571DCC0DE6001E9FF9 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CC2D4D1DCC0DE6001E9FF9 /* UIColor+Extension.swift */; };
+		35CC2D581DCC0DE6001E9FF9 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CC2D4F1DCC0DE6001E9FF9 /* UIImage+Extension.m */; };
+		35CC2D591DCC0DE6001E9FF9 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CC2D501DCC0DE6001E9FF9 /* UILabel+Extension.swift */; };
+		35CC2D5A1DCC0DE6001E9FF9 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CC2D511DCC0DE6001E9FF9 /* UITextField+Extension.swift */; };
+		35CC2D5B1DCC0DE6001E9FF9 /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CC2D521DCC0DE6001E9FF9 /* UITextView+Extension.swift */; };
+		35CC2D5C1DCC0DE6001E9FF9 /* UIView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CC2D541DCC0DE6001E9FF9 /* UIView+Extensions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +59,16 @@
 		35CC2D381DCC0A1E001E9FF9 /* LHLObjCDemosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LHLObjCDemosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CC2D3C1DCC0A1E001E9FF9 /* LHLObjCDemosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHLObjCDemosUITests.m; sourceTree = "<group>"; };
 		35CC2D3E1DCC0A1E001E9FF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35CC2D4B1DCC0DE6001E9FF9 /* Helper+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Helper+Extensions.swift"; sourceTree = "<group>"; };
+		35CC2D4C1DCC0DE6001E9FF9 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		35CC2D4D1DCC0DE6001E9FF9 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		35CC2D4E1DCC0DE6001E9FF9 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		35CC2D4F1DCC0DE6001E9FF9 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		35CC2D501DCC0DE6001E9FF9 /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		35CC2D511DCC0DE6001E9FF9 /* UITextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		35CC2D521DCC0DE6001E9FF9 /* UITextView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
+		35CC2D531DCC0DE6001E9FF9 /* UIView+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extensions.h"; sourceTree = "<group>"; };
+		35CC2D541DCC0DE6001E9FF9 /* UIView+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extensions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +119,12 @@
 		35CC2D161DCC0A1E001E9FF9 /* LHLObjCDemos */ = {
 			isa = PBXGroup;
 			children = (
+				35CC2D201DCC0A1E001E9FF9 /* Main.storyboard */,
 				35CC2D1A1DCC0A1E001E9FF9 /* AppDelegate.h */,
 				35CC2D1B1DCC0A1E001E9FF9 /* AppDelegate.m */,
 				35CC2D1D1DCC0A1E001E9FF9 /* ViewController.h */,
 				35CC2D1E1DCC0A1E001E9FF9 /* ViewController.m */,
-				35CC2D201DCC0A1E001E9FF9 /* Main.storyboard */,
+				35CC2D4A1DCC0DE6001E9FF9 /* Categories */,
 				35CC2D231DCC0A1E001E9FF9 /* Assets.xcassets */,
 				35CC2D251DCC0A1E001E9FF9 /* LaunchScreen.storyboard */,
 				35CC2D281DCC0A1E001E9FF9 /* Info.plist */,
@@ -138,6 +157,23 @@
 				35CC2D3E1DCC0A1E001E9FF9 /* Info.plist */,
 			);
 			path = LHLObjCDemosUITests;
+			sourceTree = "<group>";
+		};
+		35CC2D4A1DCC0DE6001E9FF9 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				35CC2D4B1DCC0DE6001E9FF9 /* Helper+Extensions.swift */,
+				35CC2D4C1DCC0DE6001E9FF9 /* UIButton+Extension.swift */,
+				35CC2D4D1DCC0DE6001E9FF9 /* UIColor+Extension.swift */,
+				35CC2D4E1DCC0DE6001E9FF9 /* UIImage+Extension.h */,
+				35CC2D4F1DCC0DE6001E9FF9 /* UIImage+Extension.m */,
+				35CC2D501DCC0DE6001E9FF9 /* UILabel+Extension.swift */,
+				35CC2D511DCC0DE6001E9FF9 /* UITextField+Extension.swift */,
+				35CC2D521DCC0DE6001E9FF9 /* UITextView+Extension.swift */,
+				35CC2D531DCC0DE6001E9FF9 /* UIView+Extensions.h */,
+				35CC2D541DCC0DE6001E9FF9 /* UIView+Extensions.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,8 +312,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35CC2D5A1DCC0DE6001E9FF9 /* UITextField+Extension.swift in Sources */,
+				35CC2D591DCC0DE6001E9FF9 /* UILabel+Extension.swift in Sources */,
 				35CC2D1F1DCC0A1E001E9FF9 /* ViewController.m in Sources */,
+				35CC2D5B1DCC0DE6001E9FF9 /* UITextView+Extension.swift in Sources */,
+				35CC2D581DCC0DE6001E9FF9 /* UIImage+Extension.m in Sources */,
+				35CC2D551DCC0DE6001E9FF9 /* Helper+Extensions.swift in Sources */,
+				35CC2D5C1DCC0DE6001E9FF9 /* UIView+Extensions.m in Sources */,
 				35CC2D1C1DCC0A1E001E9FF9 /* AppDelegate.m in Sources */,
+				35CC2D571DCC0DE6001E9FF9 /* UIColor+Extension.swift in Sources */,
+				35CC2D561DCC0DE6001E9FF9 /* UIButton+Extension.swift in Sources */,
 				35CC2D191DCC0A1E001E9FF9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,6 +494,7 @@
 		35CC2D451DCC0A1E001E9FF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = HJ323MUWXQ;
 				INFOPLIST_FILE = LHLObjCDemosTests/Info.plist;
@@ -463,6 +508,7 @@
 		35CC2D461DCC0A1E001E9FF9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = HJ323MUWXQ;
 				INFOPLIST_FILE = LHLObjCDemosTests/Info.plist;
@@ -476,6 +522,7 @@
 		35CC2D481DCC0A1E001E9FF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = HJ323MUWXQ;
 				INFOPLIST_FILE = LHLObjCDemosUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -488,6 +535,7 @@
 		35CC2D491DCC0A1E001E9FF9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = HJ323MUWXQ;
 				INFOPLIST_FILE = LHLObjCDemosUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
