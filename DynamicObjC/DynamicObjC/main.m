@@ -5,6 +5,8 @@
 //  Created by Cory Alder on 2016-07-01.
 //  Copyright © 2016 Davander Mobile Corporation. All rights reserved.
 //
+//  Modified by Raeid Saqur on 2016-09-28
+//
 
 #import <Foundation/Foundation.h>
 #import "Player.h"
@@ -46,7 +48,7 @@ int main(int argc, const char * argv[]) {
         NSArray *objects = @[
                              @"some string",
                              @"another string",
-                             @[], // responds to 'count' selector
+                             @[].mutableCopy, // responds to 'count' selector
                              [[NSDate alloc] init],
                              @[], // responds to 'count' selector
                              @"final string",
@@ -54,11 +56,10 @@ int main(int argc, const char * argv[]) {
                              ];
         
         int stringCount = 0; // lets count up all the strings in my array
-        
         for (id object in objects) {
-            
             NSLog(@"This is a %@", [[object class] description]); // print a description
             
+            //if ([object isMemberOfClass:[NSString class]]) {
             if ([object isKindOfClass:[NSString class]]) { // "introspect" an object.
                 stringCount++;
             }
@@ -66,19 +67,12 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"The array has %i strings in it", stringCount);
         
-        
-        
-        
-        
         NSString *someObject = [objects firstObject]; // since the "objects" array doesn't know what type of objects it contains, we cast the contents into a variable.
         
-        
-        
-
-        
+        //NSMutableArray *array = @[].mutableCopy;
+        //[array insertObject:@"A String" atIndex:[@0 integerValue]];
         
         NSString *selectorString = @"count";
-        
         SEL someSelector = NSSelectorFromString(selectorString);
         SEL someSelector2 = @selector(insertObject:atIndex:);
         
@@ -88,13 +82,16 @@ int main(int argc, const char * argv[]) {
         
         for (id object in objects) {
             if ([object respondsToSelector:someSelector]) {
-//                [object performSelector:someSelector];
-//                [object performSelector:<#(SEL)#> withObject:<#(id)#> withObject:<#(id)#>]
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+                //[object performSelector:someSelector];
+                if ([object respondsToSelector:someSelector2]) {
+                    [object performSelector:someSelector2 withObject:@"A String" withObject:0];
+                }
+ #pragma clang diagnostic pop
                 [object count];
                 NSLog(@"the object %@ can be counted", object);
             }
-            
-            
         }
         
         NSArray *stringArray = @[@"somestirng", @"",@"",@""];
@@ -102,20 +99,16 @@ int main(int argc, const char * argv[]) {
         [stringArray countOfStrings];
         
         NSLog(@"the objects array contains %i strings", [objects countOfStrings]);
-        
-        
-        
-        
-        
-        // printing out the description of an object
+    
+        //Demo: Protocol with @optional
         
         Game *game = [[Game alloc] init];
-        
         Player *player = [[Player alloc] init];
         player.health = 10;
         
+        // printing out the description of an object
         NSLog(@"My player is %@", player); // player has an overridden description method.
-
+        
         player.delegate = game;
         [player takeDamage:5];
         [player takeDamage:5];

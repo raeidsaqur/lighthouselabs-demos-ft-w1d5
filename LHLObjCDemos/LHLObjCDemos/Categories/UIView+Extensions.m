@@ -47,4 +47,11 @@
     self.layer.borderColor = [UIColor purpleColor].CGColor;
 }
 
+#pragma mark - Extension Impl
+
++ (void)anExtensionMethodDeclaration {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
+
 @end

@@ -9,13 +9,13 @@
 #import "ViewController.h"
 #import "UIImage+Extension.h"
 #import "UIView+Extensions.h"
+#import "UIView_Extension.h"
 
+//E.g. of this class's Extension:
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *blogPicImageView;
-
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
-
 
 @end
 
@@ -26,11 +26,19 @@
     
     [super viewDidLoad];
     [self demoUIImageExtension];
+    [self demoExtensionMethodInvocation];
 
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)loginButtonPressed:(id)sender {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    
+    [self demoClassMethodInvocation];
+    //[self demoInstanceMethodInvocation];
 }
 
 #pragma mark - Demo Methods
@@ -43,16 +51,25 @@
     [self.blogPicImageView setImage:blogPic];
 }
 
-
-- (IBAction)loginButtonPressed:(id)sender {
+- (void)demoClassMethodInvocation {
     NSLog(@"%s", __PRETTY_FUNCTION__);
     
     //E.g. of a class method invocation:
-    //[UIView shakeItAnimation:self.passwordTextField];
+    [UIView shakeItAnimation:self.passwordTextField];
+}
+
+- (void)demoInstanceMethodInvocation {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
     
     //E.g. of a instance method invocation:
     [self.passwordTextField circle];
-    
 }
+
+- (void)demoExtensionMethodInvocation {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    
+    [UIView anExtensionMethodDeclaration];
+}
+
 
 @end

@@ -5,6 +5,8 @@
 //  Created by Cory Alder on 2016-07-01.
 //  Copyright © 2016 Davander Mobile Corporation. All rights reserved.
 //
+//  Modified by Raeid Saqur on 2016-09-28
+//
 
 #import <Foundation/Foundation.h>
 
@@ -25,7 +27,8 @@
 @property (nonatomic, strong, readonly) NSString *name;
 @property (nonatomic, readwrite) int health;
 
-@property (nonatomic, strong) id<PlayerDelegate> delegate;
+//RS: Changing reference type to 'weak' to avoid retain cycle
+@property (nonatomic, weak) id<PlayerDelegate> delegate;
 
 -(void)takeDamage:(int)howMuch;
 

@@ -70,6 +70,7 @@
 		35CC2D601DCC1A7C001E9FF9 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 		35CC2D621DCC1AA3001E9FF9 /* HMAccessory+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HMAccessory+Properties.h"; sourceTree = "<group>"; };
 		35CC2D631DCC1AA3001E9FF9 /* HMAccessory+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HMAccessory+Properties.m"; sourceTree = "<group>"; };
+		35CC2D651DCC1F4D001E9FF9 /* UIView_Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIView_Extension.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +175,7 @@
 				35CC2D511DCC0DE6001E9FF9 /* UITextField+Extension.swift */,
 				35CC2D531DCC0DE6001E9FF9 /* UIView+Extensions.h */,
 				35CC2D541DCC0DE6001E9FF9 /* UIView+Extensions.m */,
+				35CC2D651DCC1F4D001E9FF9 /* UIView_Extension.h */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
