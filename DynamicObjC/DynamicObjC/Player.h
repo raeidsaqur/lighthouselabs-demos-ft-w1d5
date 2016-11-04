@@ -12,11 +12,12 @@
 
 @protocol PlayerDelegate <NSObject>
 
+//Default required, no need to add it explicitly.
+//@required
 -(void)playerHasDied;
 -(void)playerTookDamage;
 
 @optional
-
 -(void)explode;
 
 @end

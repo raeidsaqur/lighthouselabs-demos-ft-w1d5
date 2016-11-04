@@ -10,14 +10,19 @@
 
 @implementation Game
 
--(void)playerHasDied {
+#pragma mark - PlayerDelegate Methods
+- (void)playerHasDied {
 // restart game?
     NSLog(@"player has died, you are dead.");
 }
 
--(void)playerTookDamage {
+- (void)playerTookDamage {
     NSLog(@"Player took damage");
 }
 
+- (void)explode {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    NSLog(@"\n\n*************************************\n|\t#####\t|-XP|_0DEEEEEEE\t#####\t|\n*************************************\n\n");
+}
 
 @end
